@@ -1,4 +1,5 @@
 import "./global.css"; // Import global CSS styles that will be applied throughout the entire app
+import { IndieFlower_400Regular, useFonts } from "@expo-google-fonts/indie-flower";
 import { Stack } from "expo-router";
 
 /*
@@ -15,5 +16,19 @@ import { Stack } from "expo-router";
  * become routes within this Stack navigator.
  */
 export default function RootLayout() {
-  return <Stack />;
+
+  // custom fonts using the useFonts hook 
+  const [fontsLoaded] = useFonts({
+    IndieFlower_400Regular,
+  });
+  if (!fontsLoaded) return null;
+
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false, // Hide header for all screens
+      }}
+    />
+  );
+
 }
