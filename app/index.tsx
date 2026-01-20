@@ -52,7 +52,7 @@ export default function Launch() {
           {/* Register Button */}
            <Pressable 
             className="bg-white/95 py-4 rounded-full items-center"
-            onPress={() => router.push('/register')}
+            onPress={() => router.push('/register')} // Navigate to Register screen using expo-router 
           >
             <Text className="text-black text-lg font-semibold">
               Create Account
@@ -62,9 +62,9 @@ export default function Launch() {
         {/* Sign In Button */}
           <Pressable 
             className="mt-4 border-2 border-white/80 bg-white/10 py-4 rounded-full items-center"
-            onPress={() => router.push('/sign-in')}
+            onPress={() => router.push('/sign-in')} // Navigate to Register screen using expo-router 
           >
-            <Text className="text-white text-lg font-semibold">Sign In</Text>
+            <Text className="text-white text-lg font-semibold">Sign In</Text> 
           </Pressable>
 
 
