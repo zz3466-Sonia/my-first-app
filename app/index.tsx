@@ -1,8 +1,8 @@
+import { router } from "expo-router";
 import React from "react";
 import { Pressable, Text, View } from "react-native";
-import { router } from "expo-router";
 import { Decorations, HeartLiquid } from "../components/doodles";
-import { BackgroundVideo, GradientOverlay } from "../components/Main&Authentication_UI";
+import { BackgroundVideo } from "../components/Main&Authentication_UI";
 
 // Launch - The launch screen component for the application
 export default function Launch() {
@@ -10,9 +10,6 @@ export default function Launch() {
     <View className="flex-1">
       {/* Background Video */}
       <BackgroundVideo />
-
-      {/* Gradient Overlay */}
-      <GradientOverlay />
 
       {/* Decorations around all ui: location in UI already set in respective tsx files */}
       <Decorations />
@@ -35,10 +32,6 @@ export default function Launch() {
           <Text className="text-white/80 mt-4 text-lg tracking-wide">
             Date • Study • Connect
           </Text>
-
-          <Text className="text-white/80 mt-10 text-center text-xl leading-7">
-            Cross thousands of miles to{"\n"}meet you
-          </Text>
         </View>
  
         {/* Heart Liquid */}
@@ -51,7 +44,9 @@ export default function Launch() {
 
           {/* Register Button */}
            <Pressable 
-            className="bg-white/95 py-4 rounded-full items-center"
+            className="bg-white/95 py-4 rounded-full items-center transition-all duration-200
+    hover:bg-white/80
+    active:bg-white/70 "
             onPress={() => router.push('/register')} // Navigate to Register screen using expo-router 
           >
             <Text className="text-black text-lg font-semibold">
@@ -61,7 +56,18 @@ export default function Launch() {
 
         {/* Sign In Button */}
           <Pressable 
-            className="mt-4 border-2 border-white/80 bg-white/10 py-4 rounded-full items-center"
+                      className="mt-4
+            border-2 border-white/80
+            bg-white/10
+            py-4 rounded-full items-center
+
+            transition-all duration-200
+            hover:bg-white/20
+            hover:border-white
+            hover:scale-[1.02]
+
+            active:bg-white/30
+            active:scale-95 "
             onPress={() => router.push('/sign-in')} // Navigate to Register screen using expo-router 
           >
             <Text className="text-white text-lg font-semibold">Sign In</Text> 
