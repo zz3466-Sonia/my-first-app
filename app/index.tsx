@@ -2,7 +2,7 @@ import React from "react";
 import { Pressable, Text, View } from "react-native";
 import { router } from "expo-router";
 import { Decorations, HeartLiquid } from "../components/doodles";
-import { BackgroundVideo, GradientOverlay } from "../components/ui";
+import { BackgroundVideo, GradientOverlay } from "../components/Main&Authentication_UI";
 
 // Launch - The launch screen component for the application
 export default function Launch() {
