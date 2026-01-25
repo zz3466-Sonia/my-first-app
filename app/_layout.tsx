@@ -4,6 +4,16 @@ import "./global.css";
 import { IndieFlower_400Regular, useFonts } from "@expo-google-fonts/indie-flower";
 import { PlayfairDisplay_700Bold, PlayfairDisplay_900Black } from '@expo-google-fonts/playfair-display';
 import { Stack } from "expo-router";
+//3-Reanimated Logger Config
+import { LogBox } from "react-native";
+
+
+
+
+// Suppress Reanimated strict mode warnings
+LogBox.ignoreLogs([
+  '[Reanimated] Reading from `value` during component render',
+]);
 
 /*
  * RootLayout - The root layout component for the entire application

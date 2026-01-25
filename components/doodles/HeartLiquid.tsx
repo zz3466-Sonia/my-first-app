@@ -46,7 +46,7 @@ export function HeartLiquid({
   const animatedProps = useAnimatedProps(() => {
     const A = 3.5; // 波浪高度
     const k = (2 * Math.PI) / 40; // 波长
-    const p = phase.value;
+    const p = phase.value; 
 
     const left = -20;
     const right = vbW + 20;
